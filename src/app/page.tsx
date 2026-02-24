@@ -186,7 +186,7 @@ export default function Home() {
           <span className="text-xl font-light text-slate-400">IT Solutions</span>
         </div>
         <div className="hidden items-center gap-8 text-sm text-slate-300 sm:flex">
-          <a href="#services" className="transition hover:text-white">Services</a>
+          <Link href="/services" className="transition hover:text-white">Services</Link>
           <a href="#portfolio" className="transition hover:text-white">Portfolio</a>
           <a href="#partnership" className="transition hover:text-white">Partnership</a>
           <a href="#about" className="transition hover:text-white">About</a>
