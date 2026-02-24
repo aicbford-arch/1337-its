@@ -153,21 +153,21 @@ const faqs = [
 
 export default function ServicesPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-zinc-950 text-zinc-100">
+    <div className="grid-pattern flex min-h-screen flex-col bg-slate-900 text-slate-100">
       {/* Header */}
-      <header className="border-b border-zinc-800/50 bg-zinc-950/90 backdrop-blur supports-[backdrop-filter]:bg-zinc-950/60">
+      <header className="border-b border-white/10 bg-slate-900/90 backdrop-blur supports-[backdrop-filter]:bg-slate-900/60">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link
               href="/"
-              className="text-xl font-bold tracking-tight text-zinc-100 hover:text-emerald-400 transition-colors"
+              className="text-xl font-bold tracking-tight text-white hover:text-emerald-400 transition-colors"
             >
               1337<span className="text-emerald-500">ITS</span>
             </Link>
             <nav className="hidden md:flex items-center gap-6">
               <Link
                 href="/"
-                className="text-sm text-zinc-400 hover:text-zinc-100 transition-colors"
+                className="text-sm text-slate-400 hover:text-white transition-colors"
               >
                 Home
               </Link>
@@ -179,7 +179,7 @@ export default function ServicesPage() {
               </Link>
               <Link
                 href="/#portfolio"
-                className="text-sm text-zinc-400 hover:text-zinc-100 transition-colors"
+                className="text-sm text-slate-400 hover:text-white transition-colors"
               >
                 Portfolio
               </Link>
@@ -196,46 +196,51 @@ export default function ServicesPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="border-b border-zinc-800/50 bg-gradient-to-b from-zinc-900 to-zinc-950 py-20 sm:py-32">
-          <div className="container mx-auto px-4">
+        <section className="relative overflow-hidden border-b border-white/10 bg-gradient-to-b from-slate-900 to-slate-950 py-20 sm:py-32">
+          <div className="absolute inset-x-10 -top-16 h-48 rounded-full bg-gradient-to-r from-cyan-400/30 via-fuchsia-400/40 to-emerald-300/30 blur-[110px]" />
+          <div className="absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-gradient-to-br from-fuchsia-500/20 to-cyan-500/10 blur-[80px]" />
+          <div className="container mx-auto px-4 relative z-10">
             <div className="mx-auto max-w-3xl text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-zinc-100 sm:text-6xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.4em] text-cyan-200/80">
+                Fractional CTO Services · Equity Partnerships
+              </p>
+              <h1 className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-6xl">
                 Your Startup Deserves a CTO.
                 <br />
-                <span className="text-emerald-400">
+                <span className="bg-gradient-to-r from-cyan-300 via-fuchsia-300 to-emerald-300 bg-clip-text text-transparent">
                   You Shouldn&apos;t Have to Pay $300k for One.
                 </span>
               </h1>
-              <p className="mt-6 text-lg leading-8 text-zinc-400">
+              <p className="mt-6 text-lg leading-8 text-slate-300">
                 Fractional CTO services for startups. Lower upfront cost,
                 long-term alignment through equity. We succeed when you succeed.
               </p>
               <div className="mt-10 flex items-center justify-center gap-4">
                 <Link
                   href="#tiers"
-                  className="rounded-md bg-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-emerald-500 transition-colors"
+                  className="rounded-2xl bg-emerald-600 px-8 py-4 text-base font-semibold text-white hover:bg-emerald-500 transition-colors hover:-translate-y-0.5"
                 >
-                  View Service Tiers
+                  View Service Tiers ↗
                 </Link>
                 <Link
                   href="/#portfolio"
-                  className="rounded-md border border-zinc-700 px-6 py-3 text-sm font-semibold text-zinc-100 hover:bg-zinc-800 transition-colors"
+                  className="rounded-2xl border border-white/30 px-8 py-4 text-base font-semibold text-white hover:border-white transition-colors"
                 >
                   See Case Studies
                 </Link>
               </div>
-              <div className="mt-8 flex items-center justify-center gap-8 text-sm text-zinc-500">
-                <div className="flex items-center gap-2">
-                  <span className="text-emerald-500">✓</span> 2 current equity
-                  partnerships
+              <div className="mt-12 grid gap-4 sm:grid-cols-3">
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p className="text-2xl font-semibold text-white">2</p>
+                  <p className="mt-1 text-sm font-medium text-slate-200">Current equity partnerships</p>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-emerald-500">✓</span> $10.5M raised by
-                  portfolio
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p className="text-2xl font-semibold text-white">$10.5M</p>
+                  <p className="mt-1 text-sm font-medium text-slate-200">Raised by portfolio</p>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-emerald-500">✓</span> 15+ years
-                  experience
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p className="text-2xl font-semibold text-white">15+</p>
+                  <p className="mt-1 text-sm font-medium text-slate-200">Years experience</p>
                 </div>
               </div>
             </div>
@@ -243,46 +248,49 @@ export default function ServicesPage() {
         </section>
 
         {/* Problem Section */}
-        <section className="border-b border-zinc-800/50 py-16 sm:py-24">
+        <section className="border-b border-white/10 py-16 sm:py-24">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl">
-              <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.4em] text-fuchsia-200/80">
+                The Challenge
+              </p>
+              <h2 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 The Full-Time CTO Dilemma
               </h2>
-              <p className="mt-6 text-lg leading-8 text-zinc-400">
+              <p className="mt-6 text-lg leading-8 text-slate-300">
                 You need technical leadership to ship product, raise capital,
                 and scale your team. But hiring a full-time CTO means:
               </p>
               <ul className="mt-8 space-y-4">
-                <li className="flex gap-3 text-zinc-300">
-                  <span className="text-red-500">❌</span>
+                <li className="flex gap-3 text-slate-200">
+                  <span className="text-red-400">❌</span>
                   <span>
                     <strong>$200-$350k/year salary</strong> + benefits + equity
                   </span>
                 </li>
-                <li className="flex gap-3 text-zinc-300">
-                  <span className="text-red-500">❌</span>
+                <li className="flex gap-3 text-slate-200">
+                  <span className="text-red-400">❌</span>
                   <span>
                     <strong>3-6 months to hire</strong> (if you find the right
                     person)
                   </span>
                 </li>
-                <li className="flex gap-3 text-zinc-300">
-                  <span className="text-red-500">❌</span>
+                <li className="flex gap-3 text-slate-200">
+                  <span className="text-red-400">❌</span>
                   <span>
                     <strong>High risk</strong> if they&apos;re not the right fit
                     (termination costs, knowledge loss)
                   </span>
                 </li>
-                <li className="flex gap-3 text-zinc-300">
-                  <span className="text-red-500">❌</span>
+                <li className="flex gap-3 text-slate-200">
+                  <span className="text-red-400">❌</span>
                   <span>
                     <strong>Expensive at seed stage</strong> when cash runway
                     is everything
                   </span>
                 </li>
               </ul>
-              <p className="mt-8 text-lg font-medium text-zinc-200">
+              <p className="mt-8 text-lg font-medium text-slate-100">
                 The result? Founders delay critical technical decisions, ship
                 broken MVPs, accumulate tech debt, or make bad early hires.
               </p>
@@ -291,46 +299,49 @@ export default function ServicesPage() {
         </section>
 
         {/* Solution Section */}
-        <section className="border-b border-zinc-800/50 bg-zinc-900/50 py-16 sm:py-24">
+        <section className="border-b border-white/10 bg-gradient-to-r from-cyan-900/30 via-slate-900/60 to-fuchsia-900/30 py-16 sm:py-24">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl">
-              <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.4em] text-emerald-200/80">
+                Our Solution
+              </p>
+              <h2 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 Fractional CTO. Full Partnership.
               </h2>
-              <p className="mt-6 text-lg leading-8 text-zinc-400">
+              <p className="mt-6 text-lg leading-8 text-slate-300">
                 1337ITS provides senior technical leadership without the
                 full-time price tag. We take equity instead of high salaries
-                because <strong className="text-zinc-200">we believe in your vision</strong>.
+                because <strong className="text-slate-100">we believe in your vision</strong>.
               </p>
               <ul className="mt-8 space-y-4">
-                <li className="flex gap-3 text-zinc-300">
-                  <span className="text-emerald-500">✅</span>
+                <li className="flex gap-3 text-slate-200">
+                  <span className="text-emerald-400">✅</span>
                   <span>
                     <strong>Start immediately</strong> (no 6-month hiring
                     process)
                   </span>
                 </li>
-                <li className="flex gap-3 text-zinc-300">
-                  <span className="text-emerald-500">✅</span>
+                <li className="flex gap-3 text-slate-200">
+                  <span className="text-emerald-400">✅</span>
                   <span>
                     <strong>60-80% lower cash cost</strong> than full-time CTO
                   </span>
                 </li>
-                <li className="flex gap-3 text-zinc-300">
-                  <span className="text-emerald-500">✅</span>
+                <li className="flex gap-3 text-slate-200">
+                  <span className="text-emerald-400">✅</span>
                   <span>
                     <strong>Aligned incentives</strong> (we win when you exit)
                   </span>
                 </li>
-                <li className="flex gap-3 text-zinc-300">
-                  <span className="text-emerald-500">✅</span>
+                <li className="flex gap-3 text-slate-200">
+                  <span className="text-emerald-400">✅</span>
                   <span>
                     <strong>Proven experience</strong> (15+ years, multiple
                     exits)
                   </span>
                 </li>
-                <li className="flex gap-3 text-zinc-300">
-                  <span className="text-emerald-500">✅</span>
+                <li className="flex gap-3 text-slate-200">
+                  <span className="text-emerald-400">✅</span>
                   <span>
                     <strong>Flexible commitment</strong> (scale up/down as you
                     grow)
@@ -342,14 +353,17 @@ export default function ServicesPage() {
         </section>
 
         {/* Service Tiers */}
-        <section id="tiers" className="border-b border-zinc-800/50 py-16 sm:py-24">
+        <section id="tiers" className="border-b border-white/10 py-16 sm:py-24">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-7xl">
               <div className="text-center">
-                <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
+                <p className="text-xs font-semibold uppercase tracking-[0.4em] text-cyan-200/80">
+                  Service Tiers
+                </p>
+                <h2 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
                   Three Tiers. One Goal: Your Success.
                 </h2>
-                <p className="mt-4 text-lg text-zinc-400">
+                <p className="mt-4 text-lg text-slate-300">
                   Pick the tier that matches your stage. All tiers include equity
                   participation and hands-on execution.
                 </p>
@@ -359,53 +373,53 @@ export default function ServicesPage() {
                 {serviceTiers.map((tier) => (
                   <div
                     key={tier.name}
-                    className={`relative flex flex-col rounded-2xl border ${
+                    className={`glow-ring relative flex flex-col rounded-3xl border ${
                       tier.popular
-                        ? "border-emerald-500 bg-zinc-900 ring-2 ring-emerald-500/20"
-                        : "border-zinc-800 bg-zinc-900/50"
-                    } p-8 shadow-xl`}
+                        ? "border-emerald-500 bg-slate-900/60 ring-2 ring-emerald-500/20"
+                        : "border-white/10 bg-slate-900/40"
+                    } p-8`}
                   >
                     {tier.popular && (
-                      <div className="absolute -top-5 left-0 right-0 mx-auto w-32 rounded-full bg-emerald-600 px-3 py-1 text-center text-sm font-semibold text-white">
+                      <div className="absolute -top-5 left-0 right-0 mx-auto w-32 rounded-full bg-gradient-to-r from-emerald-600 to-cyan-600 px-3 py-1 text-center text-sm font-semibold text-white">
                         Most Popular
                       </div>
                     )}
                     <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-zinc-100">
+                      <h3 className="text-2xl font-bold text-white">
                         {tier.name}
                       </h3>
-                      <p className="mt-2 text-sm text-zinc-400">{tier.tagline}</p>
+                      <p className="mt-2 text-sm text-slate-400">{tier.tagline}</p>
                       <p className="mt-6 flex items-baseline gap-2">
-                        <span className="text-4xl font-bold tracking-tight text-zinc-100">
+                        <span className="text-4xl font-bold tracking-tight text-white">
                           {tier.price}
                         </span>
                         <span className="text-sm font-semibold text-emerald-400">
                           + {tier.equity}
                         </span>
                       </p>
-                      <p className="mt-2 text-sm text-zinc-500">{tier.ideal}</p>
-                      <p className="mt-4 text-sm font-medium text-zinc-300">
+                      <p className="mt-2 text-sm text-slate-500">{tier.ideal}</p>
+                      <p className="mt-4 text-sm font-medium text-slate-200">
                         {tier.commitment}
                       </p>
                       <ul className="mt-8 space-y-3">
                         {tier.features.map((feature, i) => (
-                          <li key={i} className="flex gap-3 text-sm text-zinc-300">
-                            <span className="text-emerald-500 shrink-0">✓</span>
+                          <li key={i} className="flex gap-3 text-sm text-slate-200">
+                            <span className="text-emerald-400 shrink-0">✓</span>
                             <span>{feature}</span>
                           </li>
                         ))}
                       </ul>
-                      <p className="mt-8 text-xs text-zinc-500">{tier.contract}</p>
+                      <p className="mt-8 text-xs text-slate-500">{tier.contract}</p>
                     </div>
                     <Link
                       href="/#contact"
-                      className={`mt-8 block rounded-md px-4 py-3 text-center text-sm font-semibold transition-colors ${
+                      className={`mt-8 block rounded-2xl px-6 py-4 text-center text-base font-semibold transition-colors hover:-translate-y-0.5 ${
                         tier.popular
-                          ? "bg-emerald-600 text-white hover:bg-emerald-500"
-                          : "border border-zinc-700 text-zinc-100 hover:bg-zinc-800"
+                          ? "bg-gradient-to-r from-emerald-600 to-cyan-600 text-white hover:from-emerald-500 hover:to-cyan-500"
+                          : "border border-white/30 text-white hover:border-white"
                       }`}
                     >
-                      {tier.cta}
+                      {tier.cta} ↗
                     </Link>
                   </div>
                 ))}
@@ -415,43 +429,48 @@ export default function ServicesPage() {
         </section>
 
         {/* Comparison Table */}
-        <section className="border-b border-zinc-800/50 bg-zinc-900/50 py-16 sm:py-24">
+        <section className="border-b border-white/10 bg-slate-900/40 py-16 sm:py-24">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-5xl">
-              <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl text-center mb-12">
-                How We Compare
-              </h2>
-              <div className="overflow-x-auto">
+              <div className="text-center">
+                <p className="text-xs font-semibold uppercase tracking-[0.4em] text-fuchsia-200/80">
+                  Competitive Analysis
+                </p>
+                <h2 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl mb-12">
+                  How We Compare
+                </h2>
+              </div>
+              <div className="overflow-x-auto rounded-3xl border border-white/10 bg-slate-900/60">
                 <table className="w-full border-collapse text-sm">
                   <thead>
-                    <tr className="border-b border-zinc-800">
-                      <th className="py-4 px-4 text-left font-semibold text-zinc-100">
+                    <tr className="border-b border-white/10">
+                      <th className="py-6 px-6 text-left font-semibold text-white">
                         Feature
                       </th>
-                      <th className="py-4 px-4 text-left font-semibold text-emerald-400">
+                      <th className="py-6 px-6 text-left font-semibold text-emerald-400">
                         1337ITS Fractional CTO
                       </th>
-                      <th className="py-4 px-4 text-left font-semibold text-zinc-400">
+                      <th className="py-6 px-6 text-left font-semibold text-slate-400">
                         Full-Time CTO
                       </th>
-                      <th className="py-4 px-4 text-left font-semibold text-zinc-400">
+                      <th className="py-6 px-6 text-left font-semibold text-slate-400">
                         CTO Agency
                       </th>
                     </tr>
                   </thead>
                   <tbody>
                     {comparisonData.map((row, i) => (
-                      <tr key={i} className="border-b border-zinc-800/50">
-                        <td className="py-4 px-4 font-medium text-zinc-300">
+                      <tr key={i} className="border-b border-white/10 last:border-b-0">
+                        <td className="py-5 px-6 font-medium text-slate-200">
                           {row.feature}
                         </td>
-                        <td className="py-4 px-4 text-emerald-400">
+                        <td className="py-5 px-6 text-emerald-400">
                           {row.fractional}
                         </td>
-                        <td className="py-4 px-4 text-zinc-400">
+                        <td className="py-5 px-6 text-slate-400">
                           {row.fullTime}
                         </td>
-                        <td className="py-4 px-4 text-zinc-400">{row.agency}</td>
+                        <td className="py-5 px-6 text-slate-400">{row.agency}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -462,64 +481,67 @@ export default function ServicesPage() {
         </section>
 
         {/* Why Equity */}
-        <section className="border-b border-zinc-800/50 py-16 sm:py-24">
+        <section className="border-b border-white/10 py-16 sm:py-24">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl">
-              <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.4em] text-emerald-200/80">
+                Our Model
+              </p>
+              <h2 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 Why We Take Equity (And Why You Should Want Us To)
               </h2>
-              <p className="mt-6 text-lg leading-8 text-zinc-400">
+              <p className="mt-6 text-lg leading-8 text-slate-300">
                 Traditional consulting has a fatal flaw:{" "}
-                <strong className="text-zinc-200">misaligned incentives</strong>.
+                <strong className="text-slate-100">misaligned incentives</strong>.
               </p>
-              <ul className="mt-8 space-y-3 text-zinc-400">
+              <ul className="mt-8 space-y-3 text-slate-400">
                 <li className="flex gap-3">
-                  <span>•</span>
+                  <span className="text-fuchsia-400">•</span>
                   <span>
                     Hourly consultants profit from more hours, not better outcomes
                   </span>
                 </li>
                 <li className="flex gap-3">
-                  <span>•</span>
+                  <span className="text-fuchsia-400">•</span>
                   <span>
                     Agencies optimize for contract renewals, not your success
                   </span>
                 </li>
                 <li className="flex gap-3">
-                  <span>•</span>
+                  <span className="text-fuchsia-400">•</span>
                   <span>
                     No skin in the game = conservative advice, no long-term
                     commitment
                   </span>
                 </li>
               </ul>
-              <p className="mt-8 text-lg font-medium text-zinc-200">
+              <p className="mt-8 text-lg font-medium text-slate-100">
                 We&apos;re different. We take equity because:
               </p>
               <ul className="mt-6 space-y-4">
-                <li className="flex gap-3 text-zinc-300">
-                  <span className="text-emerald-500">✅</span>
+                <li className="flex gap-3 text-slate-200">
+                  <span className="text-emerald-400">✅</span>
                   <span>
                     <strong>We succeed when you exit</strong> (not when we bill
                     more hours)
                   </span>
                 </li>
-                <li className="flex gap-3 text-zinc-300">
-                  <span className="text-emerald-500">✅</span>
+                <li className="flex gap-3 text-slate-200">
+                  <span className="text-emerald-400">✅</span>
                   <span>
                     <strong>We&apos;re committed for the long haul</strong> (equity
                     vests over 4 years)
                   </span>
                 </li>
-                <li className="flex gap-3 text-zinc-300">
-                  <span className="text-emerald-500">✅</span>
+                <li className="flex gap-3 text-slate-200">
+                  <span className="text-emerald-400">✅</span>
                   <span>
                     <strong>We give strategic advice optimized for outcomes</strong>{" "}
                     (not billability)
                   </span>
                 </li>
-                <li className="flex gap-3 text-zinc-300">
-                  <span className="text-emerald-500">✅</span>
+                <li className="flex gap-3 text-slate-200">
+                  <span className="text-emerald-400">✅</span>
                   <span>
                     <strong>We signal confidence to investors</strong> (we believe
                     in your vision enough to bet on it)
@@ -531,19 +553,24 @@ export default function ServicesPage() {
         </section>
 
         {/* FAQ */}
-        <section className="border-b border-zinc-800/50 bg-zinc-900/50 py-16 sm:py-24">
+        <section className="border-b border-white/10 bg-slate-900/40 py-16 sm:py-24">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl">
-              <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl text-center mb-12">
-                Frequently Asked Questions
-              </h2>
+              <div className="text-center">
+                <p className="text-xs font-semibold uppercase tracking-[0.4em] text-cyan-200/80">
+                  Common Questions
+                </p>
+                <h2 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl mb-12">
+                  Frequently Asked Questions
+                </h2>
+              </div>
               <dl className="space-y-8">
                 {faqs.map((faq, i) => (
-                  <div key={i}>
-                    <dt className="text-lg font-semibold text-zinc-100">
+                  <div key={i} className="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
+                    <dt className="text-lg font-semibold text-white">
                       {faq.q}
                     </dt>
-                    <dd className="mt-2 text-zinc-400">{faq.a}</dd>
+                    <dd className="mt-2 text-slate-300">{faq.a}</dd>
                   </div>
                 ))}
               </dl>
@@ -555,33 +582,45 @@ export default function ServicesPage() {
         <section className="py-16 sm:py-24">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.4em] text-fuchsia-200/80">
+                Next Steps
+              </p>
+              <h2 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 Ready to Partner?
               </h2>
-              <p className="mt-6 text-lg leading-8 text-zinc-400">
+              <p className="mt-6 text-lg leading-8 text-slate-300">
                 Let&apos;s talk. No sales pitch—just an honest conversation about
                 whether we&apos;re a fit for your stage and goals.
               </p>
               <div className="mt-8">
-                <h3 className="text-lg font-semibold text-zinc-200">
+                <h3 className="text-lg font-semibold text-slate-100">
                   What to expect:
                 </h3>
-                <ul className="mt-4 space-y-2 text-zinc-400">
-                  <li>• 30-minute discovery call (video or phone)</li>
-                  <li>• Custom proposal within 48 hours</li>
-                  <li>• Start within 7 days of agreement</li>
+                <ul className="mt-4 space-y-2 text-slate-400">
+                  <li className="flex items-center gap-2">
+                    <span className="text-cyan-400">•</span>
+                    <span>30-minute discovery call (video or phone)</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-cyan-400">•</span>
+                    <span>Custom proposal within 48 hours</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-cyan-400">•</span>
+                    <span>Start within 7 days of agreement</span>
+                  </li>
                 </ul>
               </div>
               <div className="mt-10 flex items-center justify-center gap-4">
                 <Link
                   href="/#contact"
-                  className="rounded-md bg-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-emerald-500 transition-colors"
+                  className="rounded-2xl bg-gradient-to-r from-emerald-600 to-cyan-600 px-8 py-4 text-base font-semibold text-white hover:from-emerald-500 hover:to-cyan-500 transition-colors hover:-translate-y-0.5"
                 >
-                  Schedule Discovery Call
+                  Schedule Discovery Call ↗
                 </Link>
                 <Link
                   href="mailto:cbford@1337itsolutions.com"
-                  className="rounded-md border border-zinc-700 px-6 py-3 text-sm font-semibold text-zinc-100 hover:bg-zinc-800 transition-colors"
+                  className="rounded-2xl border border-white/30 px-8 py-4 text-base font-semibold text-white hover:border-white transition-colors"
                 >
                   Email Blake Directly
                 </Link>
@@ -592,51 +631,51 @@ export default function ServicesPage() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-zinc-800/50 bg-zinc-950 py-12">
+      <footer className="border-t border-white/10 bg-slate-900 py-12">
         <div className="container mx-auto px-4">
           <div className="grid gap-8 md:grid-cols-3">
             <div>
-              <h3 className="text-lg font-bold text-zinc-100">
+              <h3 className="text-lg font-bold text-white">
                 1337<span className="text-emerald-500">ITS</span>
               </h3>
-              <p className="mt-2 text-sm text-zinc-500">
+              <p className="mt-2 text-sm text-slate-500">
                 Technical Co-Founder Partnerships · Venture Studio · Cloud Native
               </p>
             </div>
             <div>
-              <h4 className="text-sm font-semibold text-zinc-400">Navigation</h4>
-              <ul className="mt-4 space-y-2 text-sm text-zinc-500">
+              <h4 className="text-sm font-semibold text-slate-400">Navigation</h4>
+              <ul className="mt-4 space-y-2 text-sm text-slate-500">
                 <li>
-                  <Link href="/" className="hover:text-zinc-300">
+                  <Link href="/" className="hover:text-white">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services" className="hover:text-zinc-300">
+                  <Link href="/services" className="hover:text-white">
                     Services
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#portfolio" className="hover:text-zinc-300">
+                  <Link href="/#portfolio" className="hover:text-white">
                     Portfolio
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#contact" className="hover:text-zinc-300">
+                  <Link href="/#contact" className="hover:text-white">
                     Contact
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="text-sm font-semibold text-zinc-400">Contact</h4>
-              <ul className="mt-4 space-y-2 text-sm text-zinc-500">
+              <h4 className="text-sm font-semibold text-slate-400">Contact</h4>
+              <ul className="mt-4 space-y-2 text-sm text-slate-500">
                 <li>📧 cbford@1337itsolutions.com</li>
                 <li>🌐 St. Louis, Missouri · Remote-First</li>
               </ul>
             </div>
           </div>
-          <div className="mt-8 border-t border-zinc-800/50 pt-8 text-center text-sm text-zinc-600">
+          <div className="mt-8 border-t border-white/10 pt-8 text-center text-sm text-slate-600">
             © {new Date().getFullYear()} 1337 IT Solutions. All rights reserved.
           </div>
         </div>
