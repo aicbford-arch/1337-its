@@ -53,15 +53,16 @@ const servicePillars = [
   },
   {
     icon: "🤖",
-    title: "AI Ops & Intelligent Automation",
+    title: "AI Agents & Intelligent Automation",
     summary:
-      "We embed AI into your operations—not as a demo, but as a force multiplier that closes incidents and accelerates decisions.",
+      "We design, build, and deploy production AI agents for your operations—not demos, not pilots. Autonomous agents that take action, close incidents, and accelerate decisions at machine speed.",
     bullets: [
       "LLM-powered runbook copilots and proactive anomaly detection",
       "Knowledge graphs fused with telemetry for self-diagnosing systems",
       "Workflow automation that eliminates toil, not just tracks it",
+      "End-to-end AI agent delivery: architecture, containerization, GCP/AWS deployment, observability, and ongoing ops",
     ],
-    outcome: "Incidents resolve before Slack wakes up the on-call engineer.",
+    outcome: "AI agents that act — not assistants that suggest.",
   },
   {
     icon: "⚡",
@@ -80,12 +81,30 @@ const servicePillars = [
 /* ── Portfolio ── */
 const portfolio = [
   {
+    name: "RunBook Co-Pilot",
+    url: null,
+    role: "1337ITS Product · AI Agent Platform",
+    category: "AI-Powered Operations",
+    description:
+      "Our flagship AI agent product — and the proof that we build what we sell. RunBook Co-Pilot is a production AI agent system for DevOps and SRE teams that bridges the gap between static documentation and autonomous action. It subscribes to alert streams, reasons through incidents using LLM-powered agents, executes remediation steps, and auto-generates postmortems — without waking the on-call engineer for routine issues.",
+    techStack: "Built with: LangGraph · Anthropic Claude · MCP · GCP Cloud Run · pgvector · LangSmith · GitLab CI",
+    techTags: ["LangGraph", "Claude", "MCP", "Cloud Run", "pgvector", "LangSmith", "GitLab CI", "Terraform"],
+    impact: [
+      "LLM-powered agents that subscribe to status pages and alert streams",
+      "Automatic postmortem capture and knowledge base enrichment",
+      "Workflow engine that turns tribal knowledge into repeatable automation",
+    ],
+    testimonial: null,
+  },
+  {
     name: "BKwire",
     url: "https://bkwire.com",
     role: "Equity Partner · CTO",
     category: "Financial Risk Intelligence",
     description:
       "BKwire is a bankruptcy monitoring and alert platform that helps businesses track when their customers file for bankruptcy. In thin-margin industries—fuel distribution, wholesale, logistics—losing even one receivable to an undetected filing can cost tens of thousands. BKwire delivers real-time alerts so companies can act immediately: adjusting credit terms, filing claims, and protecting their bottom line before it's too late.",
+    techStack: null,
+    techTags: ["AWS", "GCP", "Python", "Data Pipelines", "Real-time Alerts"],
     impact: [
       "Real-time bankruptcy filing alerts saving clients thousands per incident",
       "Multi-cloud data pipeline architecture spanning AWS and GCP",
@@ -101,24 +120,12 @@ const portfolio = [
     category: "Research Lab Management",
     description:
       "Caprix is a lab management platform purpose-built for research labs and Principal Investigators scaling their programs. As labs grow, what once felt organized becomes chaos: overlapping grants, shifting timelines, and hours lost to manual tracking. Caprix gives PIs the visibility to scale their impact without scaling the administrative burden—grant tracking, resource allocation, and timeline management in one intelligent system.",
+    techStack: null,
+    techTags: ["React", "Python", "PostgreSQL", "GCP", "Grant Management"],
     impact: [
       "\"Scaling Science Without Scaling Chaos\" — operational clarity for growing labs",
       "Grant lifecycle management from proposal through compliance reporting",
       "Resource visibility that lets PIs focus on science, not spreadsheets",
-    ],
-    testimonial: null,
-  },
-  {
-    name: "RunBook Co-Pilot",
-    url: null,
-    role: "1337ITS Product",
-    category: "AI-Powered Operations",
-    description:
-      "RunBook Co-Pilot is our emerging AI operations product—an intelligent system that bridges the gap between documentation and action. It transforms static runbooks into living, context-aware copilots that guide operators through incidents, automate routine procedures, and capture institutional knowledge that typically walks out the door with senior engineers.",
-    impact: [
-      "LLM-powered agents that subscribe to status pages and alert streams",
-      "Automatic postmortem capture and knowledge base enrichment",
-      "Workflow engine that turns tribal knowledge into repeatable automation",
     ],
     testimonial: null,
   },
@@ -186,7 +193,9 @@ export default function Home() {
           <span className="text-xl font-light text-slate-400">IT Solutions</span>
         </div>
         <div className="hidden items-center gap-8 text-sm text-slate-300 sm:flex">
+          <Link href="/ai-agents" className="transition hover:text-white">AI Agents</Link>
           <Link href="/services" className="transition hover:text-white">Services</Link>
+          <Link href="/blog" className="transition hover:text-white">Blog</Link>
           <a href="#portfolio" className="transition hover:text-white">Portfolio</a>
           <a href="#partnership" className="transition hover:text-white">Partnership</a>
           <a href="#about" className="transition hover:text-white">About</a>
@@ -218,8 +227,9 @@ export default function Home() {
           </h1>
 
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-200 sm:text-xl">
-            1337 IT Solutions is a venture studio and technical consulting firm that partners with
-            startups and growth-stage companies through equity-for-engineering arrangements. You get
+            1337 IT Solutions builds production AI agents and cloud-native systems for startups,
+            growth-stage companies, and enterprise teams. We partner through equity-for-engineering
+            arrangements — or retainer and outcome-based engagements for enterprise clients. You get
             enterprise-grade CTO leadership and cloud-native architecture. We get a stake in your
             future. Your success becomes our success—literally.
           </p>
@@ -310,6 +320,49 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ════════════════ AI Agent Readiness Assessment ════════════════ */}
+        <section id="assessment" className="mt-20">
+          <div className="rounded-[32px] border border-white/10 bg-gradient-to-r from-cyan-900/30 via-slate-900/60 to-fuchsia-900/30 p-8 sm:p-12">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-2xl font-semibold text-white sm:text-3xl">
+                AI Agent Readiness Assessment
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-slate-300">
+                Not sure where to start with AI agents? We offer a free 45-minute technical
+                assessment for qualified companies. We&apos;ll review your current stack, identify
+                the highest-ROI agent use cases, and give you a plain-language implementation
+                roadmap — no sales pitch.
+              </p>
+              <ul className="mt-6 space-y-2 text-left text-sm text-slate-200 max-w-md mx-auto">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300" />
+                  <span>Identify your top 3 AI agent opportunities by ROI</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300" />
+                  <span>Assess your current data and infrastructure readiness</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300" />
+                  <span>Get a framework selection recommendation (LangGraph, CrewAI, etc.)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300" />
+                  <span>Understand build vs. buy tradeoffs for your specific context</span>
+                </li>
+              </ul>
+              <div className="mt-8">
+                <a
+                  href="mailto:cbford@1337itsolutions.com?subject=AI Agent Readiness Assessment"
+                  className="inline-flex items-center justify-center rounded-2xl border border-white/30 px-8 py-4 text-base font-semibold text-white transition hover:border-white"
+                >
+                  Request a Free Assessment ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ════════════════ Portfolio ════════════════ */}
         <section id="portfolio" className="mt-24">
           <div className="text-center">
@@ -359,6 +412,11 @@ export default function Home() {
                     <p className="mt-4 text-base leading-relaxed text-slate-200">
                       {project.description}
                     </p>
+                    {project.techStack && (
+                      <p className="mt-3 text-sm font-medium text-cyan-200/80">
+                        {project.techStack}
+                      </p>
+                    )}
                     {project.testimonial && (
                       <blockquote className="mt-6 rounded-2xl border-l-2 border-cyan-400/40 bg-white/5 p-5 text-sm italic leading-relaxed text-slate-300">
                         {project.testimonial}
@@ -377,6 +435,18 @@ export default function Home() {
                         </li>
                       ))}
                     </ul>
+                    {project.techTags && (
+                      <div className="mt-4 flex flex-wrap gap-1.5">
+                        {project.techTags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="rounded bg-[#EEEDFE] px-2.5 py-0.5 text-xs font-medium text-[#3C3489]"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </article>
@@ -421,7 +491,7 @@ export default function Home() {
             {/* Who this is for */}
             <div className="mt-12 rounded-2xl border border-white/10 bg-white/5 p-8">
               <h3 className="text-xl font-semibold text-white">Who This Is For</h3>
-              <div className="mt-6 grid gap-6 sm:grid-cols-3">
+              <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 <div>
                   <p className="text-sm font-semibold text-cyan-200">Startups</p>
                   <p className="mt-2 text-sm text-slate-300">
@@ -444,6 +514,15 @@ export default function Home() {
                     You have the domain expertise and market insight. We bring the technical
                     co-founder capability—architecture, team building, and engineering
                     leadership—without giving up a founder seat.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-cyan-200">Enterprise &amp; Mid-Market Teams</p>
+                  <p className="mt-2 text-sm text-slate-300">
+                    You have an internal team but need specialized AI agent expertise —
+                    LangGraph orchestration, MCP tool integration, GCP/AWS-native deployment,
+                    and production observability. We embed as your AI agent practice,
+                    shipping agents and leaving your team with the skills to run them.
                   </p>
                 </div>
               </div>
@@ -553,7 +632,7 @@ export default function Home() {
               </p>
               <p className="flex items-center gap-2">
                 <span>🎯</span>
-                <span>Cloud Native · DevOps · AI Ops · Technical Co-Founder Partnerships</span>
+                <span>Cloud Native · DevOps · AI Agents · Technical Co-Founder Partnerships</span>
               </p>
             </div>
           </div>
@@ -566,7 +645,7 @@ export default function Home() {
         <footer className="mt-16 border-t border-white/5 pt-8 text-center text-xs text-slate-500">
           <p>© {new Date().getFullYear()} 1337 IT Solutions LLC. All rights reserved.</p>
           <p className="mt-1">
-            Cloud Native · DevOps · AI Ops · Equity Partnerships
+            AI Agents · Cloud Native · DevOps · Equity Partnerships
           </p>
         </footer>
       </main>

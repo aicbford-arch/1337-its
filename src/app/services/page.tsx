@@ -166,6 +166,12 @@ export default function ServicesPage() {
             </Link>
             <nav className="hidden md:flex items-center gap-6">
               <Link
+                href="/ai-agents"
+                className="text-sm text-slate-400 hover:text-white transition-colors"
+              >
+                AI Agents
+              </Link>
+              <Link
                 href="/"
                 className="text-sm text-slate-400 hover:text-white transition-colors"
               >
