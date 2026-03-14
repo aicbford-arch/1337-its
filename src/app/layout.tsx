@@ -48,6 +48,42 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "1337 IT Solutions",
+              url: "https://1337itsolutions.com",
+              description: "AI agent development and technical co-founder partnerships.",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "St. Louis",
+                addressRegion: "MO",
+                addressCountry: "US",
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                email: "cbford@1337itsolutions.com",
+                contactType: "sales",
+              },
+              sameAs: ["https://linkedin.com/company/1337itsolutions"],
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "Services",
+                itemListElement: [
+                  { "@type": "Offer", name: "AI Agent Development & Deployment" },
+                  { "@type": "Offer", name: "Technical Co-Founder Partnership" },
+                  { "@type": "Offer", name: "Cloud Native Architecture" },
+                  { "@type": "Offer", name: "DevOps & CI/CD Automation" },
+                ],
+              },
+            }),
+          }}
+        />
+      </head>
       <body className={`${primary.variable} ${mono.variable} antialiased`}>
         {children}
       </body>

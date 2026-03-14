@@ -81,12 +81,28 @@ const servicePillars = [
 /* ── Portfolio ── */
 const portfolio = [
   {
+    name: "RunBook Co-Pilot",
+    url: null,
+    role: "1337ITS Product · AI Agent Platform",
+    category: "AI-Powered Operations",
+    description:
+      "Our flagship AI agent product — and the proof that we build what we sell. RunBook Co-Pilot is a production AI agent system for DevOps and SRE teams that bridges the gap between static documentation and autonomous action. It subscribes to alert streams, reasons through incidents using LLM-powered agents, executes remediation steps, and auto-generates postmortems — without waking the on-call engineer for routine issues.",
+    techStack: "Built with: LangGraph · Anthropic Claude · MCP · GCP Cloud Run · pgvector · LangSmith · GitLab CI",
+    impact: [
+      "LLM-powered agents that subscribe to status pages and alert streams",
+      "Automatic postmortem capture and knowledge base enrichment",
+      "Workflow engine that turns tribal knowledge into repeatable automation",
+    ],
+    testimonial: null,
+  },
+  {
     name: "BKwire",
     url: "https://bkwire.com",
     role: "Equity Partner · CTO",
     category: "Financial Risk Intelligence",
     description:
       "BKwire is a bankruptcy monitoring and alert platform that helps businesses track when their customers file for bankruptcy. In thin-margin industries—fuel distribution, wholesale, logistics—losing even one receivable to an undetected filing can cost tens of thousands. BKwire delivers real-time alerts so companies can act immediately: adjusting credit terms, filing claims, and protecting their bottom line before it's too late.",
+    techStack: null,
     impact: [
       "Real-time bankruptcy filing alerts saving clients thousands per incident",
       "Multi-cloud data pipeline architecture spanning AWS and GCP",
@@ -102,24 +118,11 @@ const portfolio = [
     category: "Research Lab Management",
     description:
       "Caprix is a lab management platform purpose-built for research labs and Principal Investigators scaling their programs. As labs grow, what once felt organized becomes chaos: overlapping grants, shifting timelines, and hours lost to manual tracking. Caprix gives PIs the visibility to scale their impact without scaling the administrative burden—grant tracking, resource allocation, and timeline management in one intelligent system.",
+    techStack: null,
     impact: [
       "\"Scaling Science Without Scaling Chaos\" — operational clarity for growing labs",
       "Grant lifecycle management from proposal through compliance reporting",
       "Resource visibility that lets PIs focus on science, not spreadsheets",
-    ],
-    testimonial: null,
-  },
-  {
-    name: "RunBook Co-Pilot",
-    url: null,
-    role: "1337ITS Product",
-    category: "AI-Powered Operations",
-    description:
-      "RunBook Co-Pilot is our emerging AI operations product—an intelligent system that bridges the gap between documentation and action. It transforms static runbooks into living, context-aware copilots that guide operators through incidents, automate routine procedures, and capture institutional knowledge that typically walks out the door with senior engineers.",
-    impact: [
-      "LLM-powered agents that subscribe to status pages and alert streams",
-      "Automatic postmortem capture and knowledge base enrichment",
-      "Workflow engine that turns tribal knowledge into repeatable automation",
     ],
     testimonial: null,
   },
@@ -187,6 +190,7 @@ export default function Home() {
           <span className="text-xl font-light text-slate-400">IT Solutions</span>
         </div>
         <div className="hidden items-center gap-8 text-sm text-slate-300 sm:flex">
+          <Link href="/ai-agents" className="transition hover:text-white">AI Agents</Link>
           <Link href="/services" className="transition hover:text-white">Services</Link>
           <a href="#portfolio" className="transition hover:text-white">Portfolio</a>
           <a href="#partnership" className="transition hover:text-white">Partnership</a>
@@ -361,6 +365,11 @@ export default function Home() {
                     <p className="mt-4 text-base leading-relaxed text-slate-200">
                       {project.description}
                     </p>
+                    {project.techStack && (
+                      <p className="mt-3 text-sm font-medium text-cyan-200/80">
+                        {project.techStack}
+                      </p>
+                    )}
                     {project.testimonial && (
                       <blockquote className="mt-6 rounded-2xl border-l-2 border-cyan-400/40 bg-white/5 p-5 text-sm italic leading-relaxed text-slate-300">
                         {project.testimonial}
@@ -577,7 +586,7 @@ export default function Home() {
         <footer className="mt-16 border-t border-white/5 pt-8 text-center text-xs text-slate-500">
           <p>© {new Date().getFullYear()} 1337 IT Solutions LLC. All rights reserved.</p>
           <p className="mt-1">
-            Cloud Native · DevOps · AI Ops · Equity Partnerships
+            AI Agents · Cloud Native · DevOps · Equity Partnerships
           </p>
         </footer>
       </main>
