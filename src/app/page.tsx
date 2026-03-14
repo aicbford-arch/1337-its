@@ -88,6 +88,7 @@ const portfolio = [
     description:
       "Our flagship AI agent product — and the proof that we build what we sell. RunBook Co-Pilot is a production AI agent system for DevOps and SRE teams that bridges the gap between static documentation and autonomous action. It subscribes to alert streams, reasons through incidents using LLM-powered agents, executes remediation steps, and auto-generates postmortems — without waking the on-call engineer for routine issues.",
     techStack: "Built with: LangGraph · Anthropic Claude · MCP · GCP Cloud Run · pgvector · LangSmith · GitLab CI",
+    techTags: ["LangGraph", "Claude", "MCP", "Cloud Run", "pgvector", "LangSmith", "GitLab CI", "Terraform"],
     impact: [
       "LLM-powered agents that subscribe to status pages and alert streams",
       "Automatic postmortem capture and knowledge base enrichment",
@@ -103,6 +104,7 @@ const portfolio = [
     description:
       "BKwire is a bankruptcy monitoring and alert platform that helps businesses track when their customers file for bankruptcy. In thin-margin industries—fuel distribution, wholesale, logistics—losing even one receivable to an undetected filing can cost tens of thousands. BKwire delivers real-time alerts so companies can act immediately: adjusting credit terms, filing claims, and protecting their bottom line before it's too late.",
     techStack: null,
+    techTags: ["AWS", "GCP", "Python", "Data Pipelines", "Real-time Alerts"],
     impact: [
       "Real-time bankruptcy filing alerts saving clients thousands per incident",
       "Multi-cloud data pipeline architecture spanning AWS and GCP",
@@ -119,6 +121,7 @@ const portfolio = [
     description:
       "Caprix is a lab management platform purpose-built for research labs and Principal Investigators scaling their programs. As labs grow, what once felt organized becomes chaos: overlapping grants, shifting timelines, and hours lost to manual tracking. Caprix gives PIs the visibility to scale their impact without scaling the administrative burden—grant tracking, resource allocation, and timeline management in one intelligent system.",
     techStack: null,
+    techTags: ["React", "Python", "PostgreSQL", "GCP", "Grant Management"],
     impact: [
       "\"Scaling Science Without Scaling Chaos\" — operational clarity for growing labs",
       "Grant lifecycle management from proposal through compliance reporting",
@@ -316,6 +319,49 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ════════════════ AI Agent Readiness Assessment ════════════════ */}
+        <section id="assessment" className="mt-20">
+          <div className="rounded-[32px] border border-white/10 bg-gradient-to-r from-cyan-900/30 via-slate-900/60 to-fuchsia-900/30 p-8 sm:p-12">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-2xl font-semibold text-white sm:text-3xl">
+                AI Agent Readiness Assessment
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-slate-300">
+                Not sure where to start with AI agents? We offer a free 45-minute technical
+                assessment for qualified companies. We&apos;ll review your current stack, identify
+                the highest-ROI agent use cases, and give you a plain-language implementation
+                roadmap — no sales pitch.
+              </p>
+              <ul className="mt-6 space-y-2 text-left text-sm text-slate-200 max-w-md mx-auto">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300" />
+                  <span>Identify your top 3 AI agent opportunities by ROI</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300" />
+                  <span>Assess your current data and infrastructure readiness</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300" />
+                  <span>Get a framework selection recommendation (LangGraph, CrewAI, etc.)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300" />
+                  <span>Understand build vs. buy tradeoffs for your specific context</span>
+                </li>
+              </ul>
+              <div className="mt-8">
+                <a
+                  href="mailto:cbford@1337itsolutions.com?subject=AI Agent Readiness Assessment"
+                  className="inline-flex items-center justify-center rounded-2xl border border-white/30 px-8 py-4 text-base font-semibold text-white transition hover:border-white"
+                >
+                  Request a Free Assessment ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ════════════════ Portfolio ════════════════ */}
         <section id="portfolio" className="mt-24">
           <div className="text-center">
@@ -388,6 +434,18 @@ export default function Home() {
                         </li>
                       ))}
                     </ul>
+                    {project.techTags && (
+                      <div className="mt-4 flex flex-wrap gap-1.5">
+                        {project.techTags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="rounded bg-[#EEEDFE] px-2.5 py-0.5 text-xs font-medium text-[#3C3489]"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </article>
