@@ -14,9 +14,9 @@ const mono = localFont({
   display: "swap",
 });
 
-const title = "1337 IT Solutions | Technical Co-Founder Partnerships & Venture Studio";
+const title = "1337 IT Solutions | AI Agent Development & Technical Co-Founder Partnerships";
 const description =
-  "We invest in your success—literally. 1337 IT Solutions partners with startups through equity-for-engineering arrangements, delivering CTO-level cloud native architecture, DevOps, and AI operations leadership.";
+  "1337 IT Solutions builds production AI agents and cloud-native systems for startups and enterprises. Equity-for-engineering partnerships. Cloud Run, GCP, LangGraph, MCP. St. Louis, MO.";
 const canonicalUrl = "https://1337itsolutions.com";
 
 export const metadata: Metadata = {

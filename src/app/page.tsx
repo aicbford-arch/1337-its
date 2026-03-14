@@ -53,15 +53,16 @@ const servicePillars = [
   },
   {
     icon: "🤖",
-    title: "AI Ops & Intelligent Automation",
+    title: "AI Agents & Intelligent Automation",
     summary:
-      "We embed AI into your operations—not as a demo, but as a force multiplier that closes incidents and accelerates decisions.",
+      "We design, build, and deploy production AI agents for your operations—not demos, not pilots. Autonomous agents that take action, close incidents, and accelerate decisions at machine speed.",
     bullets: [
       "LLM-powered runbook copilots and proactive anomaly detection",
       "Knowledge graphs fused with telemetry for self-diagnosing systems",
       "Workflow automation that eliminates toil, not just tracks it",
+      "End-to-end AI agent delivery: architecture, containerization, GCP deployment, observability, and ongoing ops",
     ],
-    outcome: "Incidents resolve before Slack wakes up the on-call engineer.",
+    outcome: "AI agents that act — not assistants that suggest.",
   },
   {
     icon: "⚡",
@@ -218,8 +219,9 @@ export default function Home() {
           </h1>
 
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-200 sm:text-xl">
-            1337 IT Solutions is a venture studio and technical consulting firm that partners with
-            startups and growth-stage companies through equity-for-engineering arrangements. You get
+            1337 IT Solutions builds production AI agents and cloud-native systems for startups,
+            growth-stage companies, and enterprise teams. We partner through equity-for-engineering
+            arrangements — or retainer and outcome-based engagements for enterprise clients. You get
             enterprise-grade CTO leadership and cloud-native architecture. We get a stake in your
             future. Your success becomes our success—literally.
           </p>
@@ -421,7 +423,7 @@ export default function Home() {
             {/* Who this is for */}
             <div className="mt-12 rounded-2xl border border-white/10 bg-white/5 p-8">
               <h3 className="text-xl font-semibold text-white">Who This Is For</h3>
-              <div className="mt-6 grid gap-6 sm:grid-cols-3">
+              <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 <div>
                   <p className="text-sm font-semibold text-cyan-200">Startups</p>
                   <p className="mt-2 text-sm text-slate-300">
@@ -444,6 +446,15 @@ export default function Home() {
                     You have the domain expertise and market insight. We bring the technical
                     co-founder capability—architecture, team building, and engineering
                     leadership—without giving up a founder seat.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-cyan-200">Enterprise &amp; Mid-Market Teams</p>
+                  <p className="mt-2 text-sm text-slate-300">
+                    You have an internal team but need specialized AI agent expertise —
+                    LangGraph orchestration, MCP tool integration, GCP-native deployment,
+                    and production observability. We embed as your AI agent practice,
+                    shipping agents and leaving your team with the skills to run them.
                   </p>
                 </div>
               </div>
