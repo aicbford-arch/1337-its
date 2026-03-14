@@ -632,7 +632,7 @@ export default function Home() {
               </p>
               <p className="flex items-center gap-2">
                 <span>🎯</span>
-                <span>Cloud Native · DevOps · AI Ops · Technical Co-Founder Partnerships</span>
+                <span>Cloud Native · DevOps · AI Agents · Technical Co-Founder Partnerships</span>
               </p>
             </div>
           </div>
