@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Production AI Agents — Built, Deployed, and Operated | 1337 IT Solutions",
   description:
-    "We architect, containerize, deploy, and operate autonomous AI agent systems on GCP. LangGraph, Anthropic Claude, MCP, Cloud Run. St. Louis, MO.",
+    "We architect, containerize, deploy, and operate autonomous AI agent systems on GCP and AWS. LangGraph, Anthropic Claude, MCP, Cloud Run, EKS. St. Louis, MO.",
 };
 
 const agentArchetypes = [
@@ -34,8 +34,9 @@ const techStack = [
   { name: "LangGraph", description: "State machine orchestration for multi-agent workflows" },
   { name: "Anthropic Claude", description: "Primary LLM backbone" },
   { name: "MCP (Model Context Protocol)", description: "Standardized tool integration" },
-  { name: "GCP Cloud Run", description: "Serverless, per-request agent deployment" },
-  { name: "pgvector", description: "Production vector memory on Cloud SQL" },
+  { name: "GCP Cloud Run / AWS ECS", description: "Serverless, per-request agent deployment" },
+  { name: "GKE / EKS", description: "Kubernetes for multi-agent systems and long-running workflows" },
+  { name: "pgvector", description: "Production vector memory on Cloud SQL or RDS" },
   { name: "LangSmith", description: "Full trace observability for every agent run" },
   { name: "Terraform", description: "Infrastructure-as-code for repeatable deployments" },
   { name: "GitLab CI + Kaniko", description: "Automated build and deploy pipeline" },
@@ -45,7 +46,7 @@ const deliveryProcess = [
   { phase: "01", title: "Discovery", detail: "Audit your workflows, identify the highest-ROI agent opportunities, and define success metrics." },
   { phase: "02", title: "Architecture", detail: "Design the agent system: state machines, tool integrations, memory strategy, and deployment topology." },
   { phase: "03", title: "Build", detail: "Implement, test, and iterate. Every agent run is traced and observable from day one." },
-  { phase: "04", title: "Deploy", detail: "Containerize, ship to GCP Cloud Run, wire up monitoring, alerting, and rollback." },
+  { phase: "04", title: "Deploy", detail: "Containerize, ship to Cloud Run, ECS, or Kubernetes (GKE/EKS), wire up monitoring, alerting, and rollback." },
   { phase: "05", title: "Operate", detail: "Ongoing optimization, drift detection, model upgrades, and knowledge transfer to your team." },
 ];
 
@@ -87,7 +88,7 @@ export default function AIAgentsPage() {
                 Production AI Agents
               </h1>
               <h2 className="mt-4 text-2xl font-medium text-slate-300 sm:text-3xl">
-                Built, Deployed, and Operated on GCP
+                Built, Deployed, and Operated on GCP &amp; AWS
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-slate-200 sm:text-xl">
                 We don&apos;t build AI agent demos. We architect, containerize, deploy,

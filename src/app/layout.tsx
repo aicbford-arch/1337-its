@@ -16,7 +16,7 @@ const mono = localFont({
 
 const title = "1337 IT Solutions | AI Agent Development & Technical Co-Founder Partnerships";
 const description =
-  "1337 IT Solutions builds production AI agents and cloud-native systems for startups and enterprises. Equity-for-engineering partnerships. Cloud Run, GCP, LangGraph, MCP. St. Louis, MO.";
+  "1337 IT Solutions builds production AI agents and cloud-native systems for startups and enterprises. Equity-for-engineering partnerships. GCP, AWS, LangGraph, MCP. St. Louis, MO.";
 const canonicalUrl = "https://1337itsolutions.com";
 
 export const metadata: Metadata = {

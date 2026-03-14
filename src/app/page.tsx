@@ -60,7 +60,7 @@ const servicePillars = [
       "LLM-powered runbook copilots and proactive anomaly detection",
       "Knowledge graphs fused with telemetry for self-diagnosing systems",
       "Workflow automation that eliminates toil, not just tracks it",
-      "End-to-end AI agent delivery: architecture, containerization, GCP deployment, observability, and ongoing ops",
+      "End-to-end AI agent delivery: architecture, containerization, GCP/AWS deployment, observability, and ongoing ops",
     ],
     outcome: "AI agents that act — not assistants that suggest.",
   },
@@ -520,7 +520,7 @@ export default function Home() {
                   <p className="text-sm font-semibold text-cyan-200">Enterprise &amp; Mid-Market Teams</p>
                   <p className="mt-2 text-sm text-slate-300">
                     You have an internal team but need specialized AI agent expertise —
-                    LangGraph orchestration, MCP tool integration, GCP-native deployment,
+                    LangGraph orchestration, MCP tool integration, GCP/AWS-native deployment,
                     and production observability. We embed as your AI agent practice,
                     shipping agents and leaving your team with the skills to run them.
                   </p>
