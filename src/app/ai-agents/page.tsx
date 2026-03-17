@@ -48,6 +48,7 @@ const deliveryProcess = [
   { phase: "03", title: "Build", detail: "Implement, test, and iterate. Every agent run is traced and observable from day one." },
   { phase: "04", title: "Deploy", detail: "Containerize, ship to Cloud Run, ECS, or Kubernetes (GKE/EKS), wire up monitoring, alerting, and rollback." },
   { phase: "05", title: "Operate", detail: "Ongoing optimization, drift detection, model upgrades, and knowledge transfer to your team." },
+  { phase: "06", title: "Scale", detail: "Expand to new workflows, teams, and use cases. Replicate proven patterns and grow your agent ecosystem." },
 ];
 
 export default function AIAgentsPage() {
