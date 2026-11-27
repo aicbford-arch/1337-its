@@ -11,7 +11,7 @@ const stats = [
   {
     value: "3",
     label: "Products live in market",
-    detail: "BKwire · Caprix · RunBook Co-Pilot",
+    detail: "BKwire · Barrel Caddie · RunBook Co-Pilot",
   },
   {
     value: "40%",
@@ -75,6 +75,95 @@ const servicePillars = [
     ],
     outcome: "Go from idea to revenue-generating product in weeks, not quarters.",
   },
+  {
+    icon: "📟",
+    title: "Site Reliability & Observability",
+    summary:
+      "The same reliability practices behind national drive-thru and ticketing platforms, sized for your stage.",
+    bullets: [
+      "Self-healing infrastructure with managed instance groups and auto scaling",
+      "Datadog, Prometheus, Grafana, and ELK observability with alerts that mean something",
+      "Incident response playbooks, SOPs, and disaster recovery that hold up at 2 a.m.",
+    ],
+    outcome: "Three nines isn't a goal. It's the baseline.",
+  },
+  {
+    icon: "🚚",
+    title: "Cloud Migration & Cost Optimization",
+    summary:
+      "Move off legacy servers and hand-built infrastructure without downtime, then stop overpaying for the cloud.",
+    bullets: [
+      "On-prem to AWS and GCP migrations with a cutover plan, not a prayer",
+      "Click-ops to Terraform: codify what you have before you change it",
+      "Cost audits that find waste without trading away performance",
+    ],
+    outcome: "Lower cloud bills, faster deploys, and infrastructure you can actually read.",
+  },
+];
+
+/* ── Founder Track Record ── */
+const founderStats = [
+  { value: "15+", label: "Years in production engineering" },
+  { value: "99.9%", label: "Uptime on national drive-thru infrastructure" },
+  { value: "50+", label: "Microservices on CI/CD pipelines he built" },
+  { value: "60%", label: "Less manual config after Terraform migrations" },
+];
+
+const experience = [
+  {
+    company: "1337 IT Solutions",
+    role: "Founder & President",
+    period: "2017 – Present",
+    highlights: [
+      "Cloud strategy, migration, and DevOps consulting across AWS, GCP, and Azure",
+      "Co-founded BKwire and built its multi-cloud data platform as CTO",
+    ],
+  },
+  {
+    company: "National Fast-Casual Restaurant Chain",
+    role: "Senior Cloud Engineer",
+    period: "2021 – Present",
+    highlights: [
+      "Kept the drive-thru platform at 99.9% uptime with self-healing GCP infrastructure",
+      "Led Terraform adoption across the org: 40% gains in consistency and deploy speed",
+      "Ran GKE clusters, Cloud Run, and the Jenkins → GitLab CI and Terraform Cloud migrations",
+    ],
+  },
+  {
+    company: "Leading Movie-Ticketing Platform",
+    role: "Senior Site Reliability Engineer",
+    period: "2016 – 2021",
+    highlights: [
+      "Led the on-prem to AWS migration for high-traffic ticketing applications",
+      "Automated deploys with Terraform, Docker, and Puppet, cutting deploy times sharply",
+      "Built observability with CloudWatch, Datadog, and Kibana across multiple AWS accounts",
+    ],
+  },
+  {
+    company: "Software Consultancy",
+    role: "DevOps Engineer (Consultant)",
+    period: "2013 – 2016",
+    highlights: [
+      "Containerized deployments on EC2 through GitLab CI/CD",
+      "HashiCorp Vault for secrets and dynamic key rotation; Prometheus and Grafana for metrics",
+    ],
+  },
+  {
+    company: "Fortune 500 Telecom",
+    role: "Systems Engineer",
+    period: "2011 – 2013",
+    highlights: [
+      "Fortune 500 Linux, MySQL, and F5 load balancing across POC, dev, UAT, and prod",
+      "Change control, disaster recovery, and runbooks that cut downtime from human error",
+    ],
+  },
+];
+
+const techStack = [
+  "AWS", "GCP", "Azure", "Terraform", "Kubernetes", "GKE", "Cloud Run", "Docker",
+  "GitLab CI", "Jenkins", "CircleCI", "Ansible", "Puppet", "HashiCorp Vault",
+  "Datadog", "Prometheus", "Grafana", "ELK", "CloudWatch", "Splunk", "Python", "Bash",
+  "MySQL", "Nginx", "F5", "LLM Agents",
 ];
 
 /* ── Portfolio ── */
@@ -95,16 +184,16 @@ const portfolio = [
       "\"BKwire has been a game-changer, saving us thousands of dollars by instantly alerting us to customers who filed for bankruptcy. Before BKwire, we were blind to timely notices, leaving us vulnerable in an industry where margins are razor-thin.\"",
   },
   {
-    name: "Caprix",
-    url: "https://caprix.ai",
-    role: "Equity Partner · CTO",
-    category: "Research Lab Management",
+    name: "Barrel Caddie",
+    url: null,
+    role: "1337ITS Product",
+    category: "Bourbon Club Operations",
     description:
-      "Caprix is a lab management platform purpose-built for research labs and Principal Investigators scaling their programs. As labs grow, what once felt organized becomes chaos: overlapping grants, shifting timelines, and hours lost to manual tracking. Caprix gives PIs the visibility to scale their impact without scaling the administrative burden—grant tracking, resource allocation, and timeline management in one intelligent system.",
+      "Barrel Caddie runs a bourbon group's barrel pick from start to finish. Organizers stop juggling spreadsheets and group texts: members join a waitlist, claim their bottles, and get pickup handled in one place. A golf outing mode lets the same group organize its days on the course with the same tools.",
     impact: [
-      "\"Scaling Science Without Scaling Chaos\" — operational clarity for growing labs",
-      "Grant lifecycle management from proposal through compliance reporting",
-      "Resource visibility that lets PIs focus on science, not spreadsheets",
+      "Waitlist management from the first sign-up to the final bottle claim",
+      "Pickup coordination so every member knows when and where to collect",
+      "Golf outing mode that puts the club's member roster to work on the course",
     ],
     testimonial: null,
   },
@@ -188,6 +277,7 @@ export default function Home() {
         <div className="hidden items-center gap-8 text-sm text-slate-300 sm:flex">
           <Link href="/services" className="transition hover:text-white">Services</Link>
           <a href="#portfolio" className="transition hover:text-white">Portfolio</a>
+          <a href="#experience" className="transition hover:text-white">Experience</a>
           <a href="#partnership" className="transition hover:text-white">Partnership</a>
           <a href="#about" className="transition hover:text-white">About</a>
           <Link
@@ -381,6 +471,91 @@ export default function Home() {
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        {/* ════════════════ Founder Track Record ════════════════ */}
+        <section id="experience" className="mt-24">
+          <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-slate-900/50 p-8 sm:p-12">
+            <div className="absolute -left-24 top-10 h-64 w-64 rounded-full bg-gradient-to-br from-emerald-400/20 to-cyan-500/10 blur-[90px]" />
+            <div className="relative">
+              <div className="mx-auto max-w-3xl text-center">
+                <p className="text-xs font-semibold uppercase tracking-[0.4em] text-cyan-200/80">
+                  Battle-Tested Leadership
+                </p>
+                <h2 className="mt-2 text-3xl font-semibold text-white sm:text-4xl">
+                  Built at national scale.
+                  <br />
+                  <span className="bg-gradient-to-r from-emerald-300 via-cyan-300 to-fuchsia-300 bg-clip-text text-transparent">
+                    Now building with you.
+                  </span>
+                </h2>
+                <p className="mt-4 text-base leading-relaxed text-slate-300">
+                  Blake Ford, founder of 1337ITS, has spent 15+ years keeping household-name
+                  platforms online, from the drive-thru systems behind a national restaurant
+                  chain to high-traffic movie ticketing. Your startup gets the same playbook from
+                  day one.
+                </p>
+              </div>
+
+              <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                {founderStats.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center"
+                  >
+                    <p className="bg-gradient-to-r from-emerald-300 to-cyan-300 bg-clip-text text-4xl font-semibold text-transparent">
+                      {stat.value}
+                    </p>
+                    <p className="mt-2 text-sm text-slate-300">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
+
+              <ol className="relative mt-14 space-y-8 border-l border-white/10 pl-6 sm:pl-8">
+                {experience.map((job) => (
+                  <li key={job.company} className="relative">
+                    <span className="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full bg-gradient-to-br from-cyan-300 to-fuchsia-300 ring-4 ring-slate-900 sm:-left-[39px]" />
+                    <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                      <h3 className="text-xl font-semibold text-white">{job.company}</h3>
+                      <span className="text-sm font-medium text-fuchsia-200/80">{job.role}</span>
+                      <span className="text-xs uppercase tracking-wider text-slate-500">
+                        {job.period}
+                      </span>
+                    </div>
+                    <ul className="mt-3 space-y-2 text-sm text-slate-200">
+                      {job.highlights.map((h) => (
+                        <li key={h} className="flex items-start gap-2">
+                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-300" />
+                          <span>{h}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                ))}
+              </ol>
+
+              <div className="mt-14">
+                <p className="text-center text-xs font-semibold uppercase tracking-[0.3em] text-emerald-200/70">
+                  Tools of the Trade
+                </p>
+                <div className="mt-5 flex flex-wrap justify-center gap-2">
+                  {techStack.map((tool) => (
+                    <span
+                      key={tool}
+                      className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-200"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <p className="mt-10 text-center text-[11px] leading-relaxed text-slate-500">
+                Experience reflects Blake Ford&apos;s individual and contract roles. Past employers
+                and clients are described generically and do not endorse 1337 IT Solutions.
+              </p>
+            </div>
           </div>
         </section>
 
