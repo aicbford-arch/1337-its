@@ -4,7 +4,7 @@ import { ContactForm } from "@/components/ContactForm";
 export const metadata = {
   title: "Fractional CTO Services - Equity-for-Code Partnership | 1337ITS",
   description:
-    "Get senior CTO leadership without $200k+ salary. We partner with startups through equity: lower cash, long-term alignment. Proven track record with BKwire, Caprix.",
+    "Get senior CTO leadership without $200k+ salary. We partner with startups through equity: lower cash, long-term alignment. 15+ years of production engineering for national restaurant, ticketing, and Fortune 500 telecom platforms, plus a proven track record with BKwire.",
 };
 
 /* ── Service Tiers ── */
@@ -143,7 +143,7 @@ const faqs = [
   },
   {
     q: "What industries do you work in?",
-    a: "Current portfolio: Fintech (BKwire), B2B SaaS (Caprix). Open to any B2B software, marketplace, or API-first companies. We avoid direct competitors within our portfolio.",
+    a: "Current portfolio: Fintech (BKwire). Open to any B2B software, marketplace, or API-first companies. We avoid direct competitors within our portfolio.",
   },
   {
     q: "Do you work with non-technical founders?",
@@ -237,11 +237,11 @@ export default function ServicesPage() {
               </div>
               <div className="mt-12 grid gap-4 sm:grid-cols-3">
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                  <p className="text-2xl font-semibold text-white">2</p>
+                  <p className="text-2xl font-semibold text-white">1</p>
                   <p className="mt-1 text-sm font-medium text-slate-200">Current equity partnerships</p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                  <p className="text-2xl font-semibold text-white">$10.5M</p>
+                  <p className="text-2xl font-semibold text-white">$5M+</p>
                   <p className="mt-1 text-sm font-medium text-slate-200">Raised by portfolio</p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
@@ -354,6 +354,57 @@ export default function ServicesPage() {
                   </span>
                 </li>
               </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Meet Your CTO */}
+        <section className="border-b border-white/10 py-16 sm:py-24">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.4em] text-cyan-200/80">
+                  Meet Your CTO
+                </p>
+                <h2 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                  The engineer the big brands call when uptime is on the line.
+                </h2>
+                <p className="mt-6 text-lg leading-8 text-slate-300">
+                  Blake Ford has spent 15+ years running production infrastructure for
+                  household-name platforms: a national restaurant chain&apos;s drive-thru systems,
+                  a leading movie-ticketing service, and a Fortune 500 telecom. He led
+                  org-wide Terraform adoption, on-prem to cloud migrations, and CI/CD for 50+
+                  microservices.
+                </p>
+                <p className="mt-4 text-lg leading-8 text-slate-300">
+                  Now he brings that enterprise playbook to startups, along with the equity stake
+                  that keeps him invested in your outcome.
+                </p>
+                <Link
+                  href="/#experience"
+                  className="mt-8 inline-flex rounded-2xl border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-white"
+                >
+                  See the full track record ↗
+                </Link>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { value: "99.9%", label: "Drive-thru uptime for a national restaurant chain" },
+                  { value: "40%", label: "Faster, more consistent infra via Terraform" },
+                  { value: "50+", label: "Microservices on automated pipelines" },
+                  { value: "AWS · GCP", label: "Large-scale migrations led on both" },
+                ].map((s) => (
+                  <div
+                    key={s.label}
+                    className="glow-ring rounded-2xl border border-white/10 bg-slate-900/60 p-5"
+                  >
+                    <p className="bg-gradient-to-r from-emerald-300 to-cyan-300 bg-clip-text text-3xl font-bold text-transparent">
+                      {s.value}
+                    </p>
+                    <p className="mt-2 text-sm text-slate-300">{s.label}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
