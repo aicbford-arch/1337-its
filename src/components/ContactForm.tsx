@@ -106,7 +106,7 @@ export function ContactForm() {
           onChange={handleChange("initiative")}
           rows={4}
           className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white outline-none transition focus:border-cyan-300/70"
-          placeholder="Example: Modernize GKE platform + ship AI Ops co-pilot for runbooks."
+          placeholder="Example: Modernize GKE platform + ship AI agent co-pilot for runbooks."
         />
       </label>
       <button

@@ -14,9 +14,9 @@ const mono = localFont({
   display: "swap",
 });
 
-const title = "1337 IT Solutions | Technical Co-Founder Partnerships & Venture Studio";
+const title = "1337 IT Solutions | AI Agent Development & Technical Co-Founder Partnerships";
 const description =
-  "We invest in your success—literally. 1337 IT Solutions partners with startups through equity-for-engineering arrangements, delivering CTO-level cloud native architecture, DevOps, and AI operations leadership.";
+  "1337 IT Solutions builds production AI agents and cloud-native systems for startups and enterprises. Equity-for-engineering partnerships. GCP, AWS, LangGraph, MCP. St. Louis, MO.";
 const canonicalUrl = "https://1337itsolutions.com";
 
 export const metadata: Metadata = {
@@ -48,6 +48,42 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "1337 IT Solutions",
+              url: "https://1337itsolutions.com",
+              description: "AI agent development and technical co-founder partnerships.",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "St. Louis",
+                addressRegion: "MO",
+                addressCountry: "US",
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                email: "cbford@1337itsolutions.com",
+                contactType: "sales",
+              },
+              sameAs: ["https://linkedin.com/company/1337itsolutions"],
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "Services",
+                itemListElement: [
+                  { "@type": "Offer", name: "AI Agent Development & Deployment" },
+                  { "@type": "Offer", name: "Technical Co-Founder Partnership" },
+                  { "@type": "Offer", name: "Cloud Native Architecture" },
+                  { "@type": "Offer", name: "DevOps & CI/CD Automation" },
+                ],
+              },
+            }),
+          }}
+        />
+      </head>
       <body className={`${primary.variable} ${mono.variable} antialiased`}>
         {children}
       </body>
